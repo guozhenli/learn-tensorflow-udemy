@@ -3,6 +3,7 @@ import  numpy as np
 class Operation():
 
     def __init__(self, input_nodes=[]):
+        # input_nodes[] is a list of pointers (refs) to other nodes, like Operations, Variable, Placeholders, etc.
         self.input_nodes = input_nodes
         self.output_nodes =  []
 
@@ -76,9 +77,12 @@ class Graph():
 
 
 def traverse_postorder(operation):
+    """
+    This is a depth-first search from 'operation' as root node
+    """
     nodes_postorder = []
     def recurse(node):
-        if isinstance(node, Operation):
+        if isinstance(node, Operation):             # if a node is an operation, first visit all its input nodes, before putting itself into the noeds_postorder[] list
             for input_node in node.input_nodes:
                 recurse(input_node)
         nodes_postorder.append(node)
@@ -90,6 +94,9 @@ def traverse_postorder(operation):
 class Session():
     def run(self, operation, feed_dict={}):
         nodes_postorder = traverse_postorder(operation)
+        # Traversing the nodes in post order makes sure that any parent node is traversed after its child nodes,
+        # thus the .output property of the child nodes already exist when visiting the parent node
+
         for node in nodes_postorder:
             if type(node)==Placeholder:
                 node.output = feed_dict[node]
