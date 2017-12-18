@@ -3,7 +3,7 @@
 Here are instructions for setting up a Python virtural environment for this course.  
 This is not always necessary when using TensorFlow in real works, but just to make sure everyone in the class are using the same versions of Python and its packages.
 
-## Create virtual environment with `conda env`
+## Create virtual environment with `conda`
 Go to where `tfdl_env.yml` is, and run
 ```bash
 conda create env -f tfdl_env.yml
