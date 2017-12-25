@@ -8,3 +8,6 @@ My notes &amp; codes from Jose Portilla's Deep Learning course on Udemy
 ## TensorFlow Estimator API
 - `DNNRegressor` exercise: [California house value prediction ](TF%20Basics/TensorFlow%20Estimator%20API%20-%20DNNRegressor%20Exercise%20-%20CA%20housing%20data.ipynb)
 - `LinearClassifier` exercise: [California household income classification from census data](TF%20Basics/TensofFlow%20Estimator%20API%20-%20Classification%20Exercise%20-%20CA%20census%20dataset.ipynb)
+
+
+## RNN
