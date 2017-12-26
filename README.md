@@ -16,6 +16,8 @@ tensor operations only
 
 
 ### TF `layer` and `estimator` API
+<img src="https://cdn-images-1.medium.com/max/1600/1*gwd5WFCpQUj9WmAX9t6ioA.png" width="60%">
+
 - [MNIST handwritten number recognition](TF%20Basics/TF%20Basic%20NN%20with%20TF%20Layers%20and%20Estimators.ipynb)   
 `tf.layer` , `tf.estimator`, simple multilayer perceptron nn
 
