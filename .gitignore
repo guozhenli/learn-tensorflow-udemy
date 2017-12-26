@@ -187,3 +187,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# TensorFlow
+*.data*
+*.index
+*.meta
+**/checkpoint
